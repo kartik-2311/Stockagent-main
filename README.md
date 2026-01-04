@@ -71,5 +71,28 @@ If you find the code is valuable, please use this citation.
 
 
 # run main.py using the venv python directly
-& 'C:\K23\Stockagent-main\venv_local\Scripts\python.exe' 'C:\K23\Stockagent-main\main.py'
+python -V ,checks version of python
+
+conda create --name stockagent python=3.9 ,creates a new environment named stockagent
+conda activate stockagent ,activates the new environment
+
+python -m venv venv_local ,creates a new virtual environment named venv_local
+
+c:\K23\Stockagent-main\venv_local\Scripts\python.exe -m pip install -U pip ,updates pip
+
+c:\K23\Stockagent-main\venv_local\Scripts\python.exe -m pip install -r requirements.txt ,installs packages from requirements.txt
+
+c:\K23\Stockagent-main\venv_local\Scripts\python.exe -m pip install colorama==0.4.4 google-generativeai>=0.3.0 openai==1.13.3 pandas>=2.0.0 protobuf==3.20.3 requests==2.31.0 tiktoken==0.5.1 ,installs packages
+
+c:\K23\Stockagent-main\venv_local\Scripts\python.exe c:\K23\Stockagent-main\main.py -h ,prints help message
+
+c:\K23\Stockagent-main\venv_local\Scripts\python.exe -m pip install setuptools ,installs setuptools
+
+c:\K23\Stockagent-main\venv_local\Scripts\python.exe c:\K23\Stockagent-main\main.py -h ,prints help message
+
+c:\K23\Stockagent-main\venv_local\Scripts\python.exe -m pip install openpyxl ,installs openpyxl
+
+c:\K23\Stockagent-main\venv_local\Scripts\python.exe c:\K23\Stockagent-main\main.py --model mock ,runs mock model
+
+
 
