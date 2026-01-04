@@ -14,7 +14,10 @@ class TradeRecord:
 
     def write_to_excel(self, file_name="res/trades.xlsx"):
         if os.path.isfile(file_name):
-            existing_df = pd.read_excel(file_name)
+            try:
+                existing_df = pd.read_excel(file_name)
+            except Exception:
+                existing_df = pd.DataFrame(columns=["交易日", "交易阶段", "股票类型", "买入交易员", "卖出交易员", "交易数量", "交易价格"])
         else:
             existing_df = pd.DataFrame(columns=["交易日", "交易阶段", "股票类型", "买入交易员", "卖出交易员", "交易数量", "交易价格"])
 
@@ -42,7 +45,10 @@ class StockRecord:
 
     def write_to_excel(self, file_name="res/stocks.xlsx"):
         if os.path.isfile(file_name):
-            existing_df = pd.read_excel(file_name)
+            try:
+                existing_df = pd.read_excel(file_name)
+            except Exception:
+                existing_df = pd.DataFrame(columns=["交易日", "第几个交易阶段", "阶段结束后股票A价格", "阶段结束后股票B价格"])
         else:
             existing_df = pd.DataFrame(columns=["交易日", "第几个交易阶段", "阶段结束后股票A价格", "阶段结束后股票B价格"])
 
@@ -85,7 +91,11 @@ class AgentRecordDaily:
 
     def write_to_excel(self, file_name="res/agent_day_record.xlsx"):
         if os.path.isfile(file_name):
-            existing_df = pd.read_excel(file_name)
+            try:
+                existing_df = pd.read_excel(file_name)
+            except Exception:
+                existing_df = pd.DataFrame(columns=["交易员", "交易日", "是否贷款", "贷款类型", "贷款数量",
+                                                    "明日是否贷款", "明日是否买入A", "明日是否卖出A", "明日是否买入B", "明日是否卖出B"])
         else:
             existing_df = pd.DataFrame(columns=["交易员", "交易日", "是否贷款", "贷款类型", "贷款数量",
                                                 "明日是否贷款", "明日是否买入A", "明日是否卖出A", "明日是否买入B", "明日是否卖出B"])
@@ -119,7 +129,12 @@ class AgentRecordSession:
 
     def write_to_excel(self, file_name="res/agent_session_record.xlsx"):
         if os.path.isfile(file_name):
-            existing_df = pd.read_excel(file_name)
+            try:
+                existing_df = pd.read_excel(file_name)
+            except Exception:
+                existing_df = pd.DataFrame(columns=["交易员", "交易日", "交易阶段", "交易前资产总额",
+                                                    "交易前持有现金", "交易前持有的A股价值", "交易前持有的B股价值",
+                                                    "挂单类型", "挂单股票类别", "挂单数量", "挂单价格"])
         else:
             existing_df = pd.DataFrame(columns=["交易员", "交易日", "交易阶段", "交易前资产总额",
                                                 "交易前持有现金", "交易前持有的A股价值", "交易前持有的B股价值",
