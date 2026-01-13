@@ -17,9 +17,9 @@ class TradeRecord:
             try:
                 existing_df = pd.read_excel(file_name)
             except Exception:
-                existing_df = pd.DataFrame(columns=["交易日", "交易阶段", "股票类型", "买入交易员", "卖出交易员", "交易数量", "交易价格"])
+                existing_df = pd.DataFrame(columns=["Trader", "Trading Day", "Stock Type", "Buy-side trader", "Selling Trader", "Transaction Quantity", "Transaction Price"])
         else:
-            existing_df = pd.DataFrame(columns=["交易日", "交易阶段", "股票类型", "买入交易员", "卖出交易员", "交易数量", "交易价格"])
+            existing_df = pd.DataFrame(columns=["Trader", "Trading Day", "Stock Type", "Buy-side trader", "Selling Trader", "Transaction Quantity", "Transaction Price"])
 
         # 将新的交易记录合并到现有DataFrame
         new_records = [[self.date, self.session, self.stock_type, self.buyer, self.seller, self.quantity, self.price]]
