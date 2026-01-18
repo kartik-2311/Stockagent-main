@@ -3,6 +3,7 @@ import random
 import pandas as pd
 import openai
 import tiktoken
+import google.generativeai as genai
 
 import util
 from agent import Agent

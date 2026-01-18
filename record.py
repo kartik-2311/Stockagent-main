@@ -48,9 +48,9 @@ class StockRecord:
             try:
                 existing_df = pd.read_excel(file_name)
             except Exception:
-                existing_df = pd.DataFrame(columns=["交易日", "第几个交易阶段", "阶段结束后股票A价格", "阶段结束后股票B价格"])
+                existing_df = pd.DataFrame(columns=["Trading Day", "Which trading phase", "Price of Stock A at the end of the stage", "Price of Stock B at the end of the stage"])
         else:
-            existing_df = pd.DataFrame(columns=["交易日", "第几个交易阶段", "阶段结束后股票A价格", "阶段结束后股票B价格"])
+            existing_df = pd.DataFrame(columns=["Trading Day", "Which trading phase", "Price of Stock A at the end of the stage", "Price of Stock B at the end of the stage"])
 
         # 将新的交易记录合并到现有DataFrame
         new_records = [[self.date, self.session, self.stock_a_price, self.stock_b_price]]
@@ -94,10 +94,10 @@ class AgentRecordDaily:
             try:
                 existing_df = pd.read_excel(file_name)
             except Exception:
-                existing_df = pd.DataFrame(columns=["交易员", "交易日", "是否贷款", "贷款类型", "贷款数量",
-                                                    "明日是否贷款", "明日是否买入A", "明日是否卖出A", "明日是否买入B", "明日是否卖出B"])
+                existing_df = pd.DataFrame(columns=["Trader", "Trading day", "Whether to take a loan", "贷款类型", "贷款数量",
+                                                    "明日Whether to take a loan", "明日是否买入A", "明日是否卖出A", "明日是否买入B", "明日是否卖出B"])
         else:
-            existing_df = pd.DataFrame(columns=["交易员", "交易日", "是否贷款", "贷款类型", "贷款数量",
+            existing_df = pd.DataFrame(columns=["Trader", "Trading day", "是否贷款", "贷款类型", "贷款数量",
                                                 "明日是否贷款", "明日是否买入A", "明日是否卖出A", "明日是否买入B", "明日是否卖出B"])
 
         # 将新的交易记录合并到现有DataFrame
