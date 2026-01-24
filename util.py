@@ -10,14 +10,14 @@ OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY', '')
 GOOGLE_API_KEY = os.environ.get('GOOGLE_API_KEY', '')
 
 # 基础设置
-AGENTS_NUM = 50  # 交易员数量
-TOTAL_DATE = 264   # 模拟时长
-TOTAL_SESSION = 3   # 每日交易次数
+AGENTS_NUM = 50  # agent数量
+TOTAL_DATE = 264   #Number of traders
+TOTAL_SESSION = 3   # Daily number of trades
 
 # 股票初始价格
 STOCK_A_INITIAL_PRICE = 30
 STOCK_B_INITIAL_PRICE = 40
-# STOCK_B_PUBLISH = 100   # 股票B发行数量
+# STOCK_B_PUBLISH = 100   # Number of shares issued for Stock B
 
 # agent初始财产
 MAX_INITIAL_PROPERTY = 5000000.0
@@ -26,14 +26,14 @@ MIN_INITIAL_PROPERTY = 100000.0
 
 # 贷款
 LOAN_TYPE = ["one-month", "two-month", "three-month"]
-LOAN_TYPE_DATE = [22, 44, 66]  # 贷款时长
-LOAN_RATE = [0.027, 0.03, 0.033] # 贷款利率
+LOAN_TYPE_DATE = [22, 44, 66]  # 
+LOAN_RATE = [0.027, 0.03, 0.033] # Loan interest rate
 
-REPAYMENT_DAYS = [22, 44, 66, 88, 110, 132, 154, 176, 198, 220, 242, 264]  # 付息日
+REPAYMENT_DAYS = [22, 44, 66, 88, 110, 132, 154, 176, 198, 220, 242, 264]  # Interest Payment Date
 
 # 财报
-SEASONAL_DAYS = 66 # 一季度的时间
-SEASON_REPORT_DAYS = [12, 78, 144, 210] # 财报发布时间
+SEASONAL_DAYS = 66 # 一quarterly time
+SEASON_REPORT_DAYS = [12, 78, 144, 210] # Earnings Release Date
 FINANCIAL_REPORT_A = ["Last quarter's financial report of Company A. Revenue growth rate (YoY): 9.49%, Revenue million: 4483.99, Gross margin: 41.05%, Income Tax as a percentage of Revenue: 11.31%, Selling Expense Rate:6.83%, Management Expense Rate: 3.83%, Net profit million: 856.6705, Depreciation and Amortization: 0.91%, Capital Expenditures: 2.30%, Changes in working capital: 0.82%, Cash Flow(million): 756.7537",
                       "Last quarter's financial report of Company A. Revenue growth rate (YoY): 7.38%, Revenue million: 4417.79, Gross margin: 35.68%, Income Tax as a percentage of Revenue: 11.75%, Selling Expense Rate:8.13%, Management Expense Rate: 4.62%, Net profit million: 493.9451, Depreciation and Amortization: 1.34%, Capital Expenditures: 2.68%, Changes in working capital: 0.86%, Cash Flow(million): 396.5329",
                       "Last quarter's financial report of Company A. Revenue growth rate (YoY): 8.70%, Revenue million: 4041.30, Gross margin: 37.45%, Income Tax as a percentage of Revenue: 9.34%, Selling Expense Rate:6.79%, Management Expense Rate: 3.41%, Net profit million: 724.3648, Depreciation and Amortization: 1.27%, Capital Expenditures: 2.44%, Changes in working capital: 0.94%, Cash Flow(million): 639.5329",
@@ -48,7 +48,7 @@ FINANCIAL_REPORT_B = ["Last quarter's financial report of Company B. Revenue gro
 EVENT_1_DAY = 78
 EVENT_1_MESSAGE = "The government has announced a reduction in the reserve requirement ratio. " \
                   "The lending interest rates have been lowered."
-EVENT_1_LOAN_RATE = [0.024, 0.027, 0.030] # 降准后的利率放在这里
+EVENT_1_LOAN_RATE = [0.024, 0.027, 0.030] # The interest rate after the reserve requirement cut is placed here
 
 EVENT_2_DAY = 144
 EVENT_2_MESSAGE = "The government has announced an increase in interest rates."

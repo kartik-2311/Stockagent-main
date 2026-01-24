@@ -32,22 +32,6 @@ def random_init(stock_a_initial, stock_b_initial):
         "repayment_date": random.choice(util.REPAYMENT_DAYS)
     }
     return stock_a, stock_b, cash, debt
-# def random_init(stock_initial_price):
-#     stock, cash, debt_amount = 0.0, 0.0, 0.0
-#     while stock * stock_initial_price + cash < util.MIN_INITIAL_PROPERTY \
-#             or stock * stock_initial_price + cash > util.MAX_INITIAL_PROPERTY \
-#             or debt_amount > stock * stock_initial_price + cash:
-#         stock = int(random.uniform(0, util.MAX_INITIAL_PROPERTY / stock_initial_price))
-#         cash = random.uniform(0, util.MAX_INITIAL_PROPERTY)
-#         debt_amount = random.uniform(0, util.MAX_INITIAL_PROPERTY)
-#     debt = {
-#         "loan": "yes",
-#         "amount": debt_amount,
-#         "loan_type": random.randint(0, len(util.LOAN_TYPE)),
-#         "repayment_date": random.choice(util.REPAYMENT_DAYS)
-#     }
-#     return stock, cash, debt
-
 
 class Agent:
     def __init__(self, i, stock_a_price, stock_b_price, secretary, model):
@@ -456,5 +440,6 @@ class Agent:
                 return {"buy_A": "no", "buy_B": "no", "sell_A": "no", "sell_B": "no", "loan": "no"}
             format_check, fail_response, estimate = self.secretary.check_estimate(resp)
         return estimate
+
 
 

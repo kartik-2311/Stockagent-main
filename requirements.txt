@@ -1,8 +1,8 @@
-colorama==0.4.4
-google-generativeai>=0.3.0
-openai==1.13.3
-pandas>=2.0.0
-procoder>=0.1.0
-protobuf==3.20.3
-Requests==2.31.0 
-tiktoken==0.5.1
+colorama==0.4.4 # For colored terminal output
+google-generativeai>=0.3.0 # For Google Generative AI
+openai==1.13.3 # For OpenAI API access
+pandas>=2.0.0 # For data manipulation
+procoder>=0.1.0 # For better code generation
+protobuf==3.20.3 # To be compatible with google-generativeai
+Requests==2.31.0 # For HTTP requests
+tiktoken==0.5.1 # For token counting
