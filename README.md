@@ -3,11 +3,14 @@
 ![workflow](fig/workflow.png)
 ![schematic](fig/schematic.png)
 
-Can AI Agents simulate real-world trading environments to investigate the impact of external factors on stock trading activities (e.g., macroeconomics, policy changes, company fundamentals, and global events)? These factors, which frequently influence trading behaviors, are critical elements in the quest for maximizing investors' profits. Our work attempts to solve this problem through large language model-based agents. We have developed a multi-agent AI system called StockAgent, driven by LLMs,  designed to simulate investors' trading behaviors in response to the real stock market. The StockAgent allows users to evaluate the impact of different external factors on investor trading and to analyze trading behavior and profitability effects. Additionally, StockAgent avoids the test set leakage issue present in existing trading simulation systems based on AI Agents. Specifically, it prevents the model from leveraging prior knowledge it may have acquired related to the test data. We evaluate different LLMs under the framework of StockAgent in a stock trading environment that closely resembles real-world conditions. The experimental results demonstrate the impact of key external factors on stock market trading, including trading behavior and stock price fluctuation rules. This research explores the study of agents' free trading gaps in the context of no prior knowledge related to market data. The patterns identified through StockAgent simulations provide valuable insights for LLM-based investment advice and stock recommendation. 
+Can AI Agents simulate real-world trading environments to investigate the impact of external factors on stock trading activities (e.g., macroeconomics, policy changes, company fundamentals, and global events)? These factors, which frequently influence trading behaviors, are critical elements in the quest for maximizing investors' profits. Our work attempts to solve this problem through large language model-based agents. We have developed a multi-agent AI system called StockAgent, driven by LLMs,  designed to simulate investors' trading behaviors in response to the real stock market. The StockAgent allows users to evaluate the impact of different external factors on investor trading and to analyze trading behavior and profitability effects. Additionally, StockAgent avoids the test set leakage issue present in existing trading simulation systems based on AI Agents. Specifically, it prevents the model from leveraging prior knowledge it may have acquired related to the test data. We evaluate different LLMs under the framework of StockAgent in a stock trading environment that closely resembles real-world conditions. The experimental results demonstrate the impact of key external factors on stock market trading, including trading behavior and stock price fluctuation rules. This research explores the study of agents' free trading gaps in the context of no prior knowledge related to market data. The patterns identified through StockAgent simulations provide valuable insights for LLM-based investment advice and stock recommendation.
 
 ## Link
+
 ARXIV LINK: https://arxiv.org/pdf/2407.18957
+
 ## Architecture
+
 ![architect](fig/workflow2.png)
 
 The Workflow of Trading Simulation Flow. There are four Phases, namely **Initial Phase**, **Trading Phase**, **Post-Trading Phase** and **Special Events Phase**. In the Post-Trading Phase, Daily events and Quarterly events occur with daily and quarterly frequency respectively. A Specific Events Phase is an event that occurs randomly and acts on a random trading day.
@@ -57,42 +60,3 @@ We set gemini-pro for default LLM.
 #### About ’procoder‘
 
 Here we use the: https://github.com/dhh1995/PromptCoder.git this tool, please download after its installation.
-
-#### Citation
-If you find the code is valuable, please use this citation.
-```
-@article{zhang2024ai,
-  title={When AI Meets Finance (StockAgent): Large Language Model-based Stock Trading in Simulated Real-world Environments},
-  author={Zhang, Chong and Liu, Xinyi and Jin, Mingyu and Zhang, Zhongmou and Li, Lingyao and Wang, Zhengting and Hua, Wenyue and Shu, Dong and Zhu, Suiyuan and Jin, Xiaobo and others},
-  journal={arXiv preprint arXiv:2407.18957},
-  year={2024}
-}
-```
-
-
-# run main.py using the venv python directly
-python -V ,checks version of python
-
-conda create --name stockagent python=3.9 ,creates a new environment named stockagent
-conda activate stockagent ,activates the new environment
-
-python -m venv venv_local ,creates a new virtual environment named venv_local
-
-c:\K23\Stockagent-main\venv_local\Scripts\python.exe -m pip install -U pip ,updates pip
-
-c:\K23\Stockagent-main\venv_local\Scripts\python.exe -m pip install -r requirements.txt ,installs packages from requirements.txt
-
-c:\K23\Stockagent-main\venv_local\Scripts\python.exe -m pip install colorama==0.4.4 google-generativeai>=0.3.0 openai==1.13.3 pandas>=2.0.0 protobuf==3.20.3 requests==2.31.0 tiktoken==0.5.1 ,installs packages
-
-c:\K23\Stockagent-main\venv_local\Scripts\python.exe c:\K23\Stockagent-main\main.py -h ,prints help message
-
-c:\K23\Stockagent-main\venv_local\Scripts\python.exe -m pip install setuptools ,installs setuptools
-
-c:\K23\Stockagent-main\venv_local\Scripts\python.exe c:\K23\Stockagent-main\main.py -h ,prints help message
-
-c:\K23\Stockagent-main\venv_local\Scripts\python.exe -m pip install openpyxl ,installs openpyxl
-
-c:\K23\Stockagent-main\venv_local\Scripts\python.exe c:\K23\Stockagent-main\main.py --model mock ,runs mock model
-
-
-
